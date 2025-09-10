@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html xml:lang="es">
-  <head>
-    <title>Sumador</title>
-  </head>
-  <body>
-    <h1>Sumador</h1>
-    <form id="sumar-form">
-      <label for="primer-numero">Primer número:</label>
-      <input type="number" id="primer-numero" />
-      <label for="segundo-numero">Segundo número:</label>
-      <input type="number" id="segundo-numero" />
-      <input type="submit" value="Sumar" id="sumar-button" />
-    </form>
-    <div id="resultado-div"></div>
-
-    <script type="module" src="./src/presenter.js"></script>
-  </body>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tarifas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Tarifas de Estacionamiento</h1>
+        
+        <form id="tarifaForm">
+            <div class="form-group">
+                <label for="fechaEntrada">Fecha y Hora de Entrada:</label>
+                <input type="datetime-local" id="fechaEntrada" name="fechaEntrada" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="fechaSalida">Fecha y Hora de Salida:</label>
+                <input type="datetime-local" id="fechaSalida" name="fechaSalida" required>
+            </div>
+            
+            <button type="submit">Calcular Tarifa</button>
+        </form>
+        
+        <div id="resultado" class="resultado hidden">
+            <h2>Resultado</h2>
+            <div id="fechas-seleccionadas">
+                <p><strong>Fecha de Entrada:</strong> <span id="entrada-mostrada"></span></p>
+                <p><strong>Fecha de Salida:</strong> <span id="salida-mostrada"></span></p>
+            </div>
+            <div id="tarifa-calculada">
+                <p><strong>Tarifa Total:</strong> $<span id="tarifa-valor"></span></p>
+            </div>
+        </div>
+        
+        <div id="error" class="error hidden">
+            <p id="mensaje-error"></p>
+        </div>
+    </div>
+    
+    <script type="module" src="src/app.js"></script>
+</body>
 </html>

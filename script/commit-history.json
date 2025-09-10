@@ -19,17 +19,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0cb5264866401a32152c1f9a3d4d9f418c8794eb",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-10T22:39:06.000Z",
       "message": "Feat:Verificación fecha salida mayor que fecha entrada",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/0cb5264866401a32152c1f9a3d4d9f418c8794eb"
     },
     "stats": {
       "total": 11,
       "additions": 10,
       "deletions": 1,
+      "date": "2025-09-10"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-10T22:51:09.000Z",
+      "message": "feat: Seleciona Fechas y muestra",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 241,
+      "additions": 224,
+      "deletions": 17,
       "date": "2025-09-10"
     },
     "coverage": 100,
