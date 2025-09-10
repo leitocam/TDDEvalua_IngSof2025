@@ -20,5 +20,11 @@ describe('calcularTarifa', () => {
         expect(() => calcularTarifa(null, fechaInicio)).toThrow();
         expect(() => calcularTarifa(null, null)).toThrow();
     });
+    //verifica que si se proporcionan ambas fechas correctamente, no lance ningun error
+    it('deberia no lanzar un error si se proporcionan ambas fechas correctamente', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-11T10:00:00');
+        expect(() => calcularTarifa(fechaInicio, fechaFin)).not.toThrow();
+    });
     
 });
