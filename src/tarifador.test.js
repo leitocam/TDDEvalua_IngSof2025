@@ -13,5 +13,12 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-09T10:00:00');
         expect(() => calcularTarifa(fechaInicio, fechaFin)).toThrow('La fecha de salida no puede ser anterior a la de entrada');
     });
+    //verifica que si solo se proporciona una fecha, lance un error de que debe ingresar ambas fechas
+    it('deberia lanzar un error si no se proporcionan ambas fechas', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        expect(() => calcularTarifa(fechaInicio, null)).toThrow();
+        expect(() => calcularTarifa(null, fechaInicio)).toThrow();
+        expect(() => calcularTarifa(null, null)).toThrow();
+    });
     
 });
