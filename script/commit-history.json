@@ -76,12 +76,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "77c1d58b8eacc567467e87dd8a359e036d389928",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-10T23:14:38.000Z",
       "message": "Fix : Muestra correctamente las fechas ingreso y salida",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/77c1d58b8eacc567467e87dd8a359e036d389928"
     },
     "stats": {
       "total": 7,
@@ -91,6 +91,25 @@
     },
     "coverage": 100,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T03:58:32.000Z",
+      "message": "feat: Muestra cobro 1 hora exacta",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 33,
+      "additions": 30,
+      "deletions": 3,
+      "date": "2025-09-11"
+    },
+    "coverage": 92.31,
+    "test_count": 7,
     "failed_tests": 0,
     "conclusion": "success"
   }

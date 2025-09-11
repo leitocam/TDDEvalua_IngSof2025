@@ -1,5 +1,4 @@
-
-import { calcularTarifa } from './Tarifador';
+import { calcularTarifa, minutesBetween } from './Tarifador';
 
 describe('calcularTarifa', () => {
     //verifica que la funcion exista y reciba dos fechas como parametros
@@ -26,5 +25,16 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-11T10:00:00');
         expect(() => calcularTarifa(fechaInicio, fechaFin)).not.toThrow();
     });
-    
+    //test(core): minutesBetween calcula minutos naturales entre dos fechas
+    it('deberia calcular minutos naturales entre dos fechas', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-10T10:30:00');
+        expect(minutesBetween(fechaInicio, fechaFin)).toBe(30);
+    });
+    //Debe calcular eo cobro para estadia de una hora exacta
+    it('deberia calcular la tarifa para una estadia de una hora exacta', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-10T11:00:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(10.00);
+    });
 });
