@@ -43,5 +43,9 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-10T10:45:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(7.50);
     });
-
-});
+    //Debe calcular el cobro para estadia mayor a una hora y horas no cerradas redondeando en 2 decimales
+    it('deberia calcular la tarifa para una estadia mayor a una hora y horas no cerradas', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-10T11:45:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(17.50);
+    });

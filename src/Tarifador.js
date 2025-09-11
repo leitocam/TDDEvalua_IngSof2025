@@ -9,17 +9,9 @@ export function calcularTarifa(fechaInicio, fechaFin) {
     
     const minutos = minutesBetween(fechaInicio, fechaFin);
     
-    // Para una hora exacta (60 minutos) retorna 10.00
-    if (minutos === 60) {
-        return 10.00;
-    }
-    
-    if (minutos < 60) {
-        const tarifa = (minutos / 60) * 10;
-        return Math.round(tarifa * 100) / 100; 
-    }
-    
-    return 0;
+    // Para estadías de cualquier duración, calcular proporcionalmente
+    const tarifa = (minutos / 60) * 10;
+    return Math.round(tarifa * 100) / 100; // Redondear a 2 decimales
 }
 
 export function minutesBetween(fechaInicio, fechaFin) {

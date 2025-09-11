@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "06508f3a27a64bd0bf62e266873c852ec5fa39be",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-11T04:15:06.000Z",
       "message": "feat: Muestra cobro menos de 1 hora",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/06508f3a27a64bd0bf62e266873c852ec5fa39be"
     },
     "stats": {
       "total": 12,
@@ -129,6 +129,25 @@
     },
     "coverage": 93.75,
     "test_count": 8,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T04:21:20.000Z",
+      "message": "feat: Muestra cobros mayores a una hora",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 22,
+      "additions": 9,
+      "deletions": 13,
+      "date": "2025-09-11"
+    },
+    "coverage": 91.67,
+    "test_count": 9,
     "failed_tests": 0,
     "conclusion": "success"
   }
