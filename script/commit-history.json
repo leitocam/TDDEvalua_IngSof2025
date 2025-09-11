@@ -228,12 +228,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2e4aa33a8be3b040da3c05ad1828d627c7a7dbcd",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-11T11:15:25.000Z",
       "message": "feat:Calculo Multiples Dias",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/2e4aa33a8be3b040da3c05ad1828d627c7a7dbcd"
     },
     "stats": {
       "total": 70,
@@ -243,6 +243,44 @@
     },
     "coverage": 97.92,
     "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "2e4aa33a8be3b040da3c05ad1828d627c7a7dbcd",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T11:26:13.000Z",
+      "message": "feat:Calculo Multiples Dias",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/2e4aa33a8be3b040da3c05ad1828d627c7a7dbcd"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 12,
+      "deletions": 1,
+      "date": "2025-09-11"
+    },
+    "coverage": 98,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T11:28:15.000Z",
+      "message": "feat:cobro bajo ticket perdido",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 12,
+      "deletions": 1,
+      "date": "2025-09-11"
+    },
+    "coverage": 98,
+    "test_count": 14,
     "failed_tests": 0,
     "conclusion": "success"
   }

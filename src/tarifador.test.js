@@ -73,4 +73,10 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-12T10:00:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(150.00);
     });
+    // "deberia cobrar 80 Bs por pérdida de ticket"
+    it('deberia cobrar 80 Bs por pérdida de ticket', () => {
+        const fechaInicio = new Date('2023-10-10T08:00:00');
+        const fechaFin = new Date('2023-10-12T10:00:00');
+        expect(calcularTarifa(fechaInicio, fechaFin,true)).toBe(80.00);
+    });
 });

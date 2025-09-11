@@ -1,10 +1,15 @@
-export function calcularTarifa(fechaInicio, fechaFin) {
+export function calcularTarifa(fechaInicio, fechaFin, perdidaTicket = false) {
     if (!fechaInicio || !fechaFin) {
         throw new Error('Debe proporcionar ambas fechas');
     }
     
     if (fechaFin < fechaInicio) {
         throw new Error('La fecha de salida no puede ser anterior a la de entrada');
+    }
+    
+    // Si se perdió el ticket, cobrar 80 Bs
+    if (perdidaTicket) {
+        return 80.00;
     }
     
     const minutos = minutesBetween(fechaInicio, fechaFin);
