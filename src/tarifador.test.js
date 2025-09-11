@@ -1,4 +1,4 @@
-import { calcularTarifa, minutesBetween } from './Tarifador';
+import { calcularTarifa, minutesBetween } from './Tarifador.js';
 
 describe('calcularTarifa', () => {
     //verifica que la funcion exista y reciba dos fechas como parametros
@@ -67,5 +67,10 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-10T23:59:59');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(50.00);
     });
-   
+    // 'deberia calcular correctamente estadías de múltiples días 
+    it('deberia calcular correctamente estadías de múltiples días', () => {
+        const fechaInicio = new Date('2023-10-10T08:00:00');
+        const fechaFin = new Date('2023-10-12T10:00:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(150.00);
+    });
 });

@@ -209,12 +209,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2a5c1d3b8c859f371aa58cba01b06556b2827a4d",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-11T05:27:06.000Z",
       "message": "feat:Tope diario maximo",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/2a5c1d3b8c859f371aa58cba01b06556b2827a4d"
     },
     "stats": {
       "total": 79,
@@ -224,6 +224,25 @@
     },
     "coverage": 68.18,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T11:15:25.000Z",
+      "message": "feat:Calculo Multiples Dias",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 70,
+      "additions": 43,
+      "deletions": 27,
+      "date": "2025-09-11"
+    },
+    "coverage": 97.92,
+    "test_count": 13,
     "failed_tests": 0,
     "conclusion": "success"
   }

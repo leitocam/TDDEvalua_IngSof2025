@@ -12,8 +12,13 @@ export function calcularTarifa(fechaInicio, fechaFin) {
     const horaFin = fechaFin.getHours();
     
     // Verificar si es el mismo día calendario o si cruza a la madrugada del día siguiente
-    const mismoDiaCalendario = fechaInicio.toDateString() === fechaFin.toDateString() ||
-        (fechaFin.getDate() === fechaInicio.getDate() + 1 && horaFin < 6);
+    const inicioStr = fechaInicio.toDateString();
+    const finStr = fechaFin.toDateString();
+    const mismoDiaCalendario = inicioStr === finStr ||
+        (fechaFin.getDate() === fechaInicio.getDate() + 1 && 
+         fechaFin.getMonth() === fechaInicio.getMonth() &&
+         fechaFin.getFullYear() === fechaInicio.getFullYear() &&
+         horaFin < 6);
     
     if (mismoDiaCalendario) {
         let tarifaTotal = 0;
@@ -45,34 +50,40 @@ export function calcularTarifa(fechaInicio, fechaFin) {
         return Math.min(tarifaRedondeada, 50.00);
     }
     
-    // Para estadías de múltiples días (lógica existente sin cambios)
-    if (horaInicio >= 22 && (horaFin >= 0 && horaFin < 6)) {
-        const tarifa = (minutos / 60) * 6;
-        return Math.round(tarifa * 100) / 100;
+    // Para estadías de múltiples días - calcular día por día
+    let tarifaTotal = 0;
+    let fechaActual = new Date(fechaInicio.getTime());
+    
+    // Primer día (día de entrada)
+    const finPrimerDia = new Date(fechaActual);
+    finPrimerDia.setHours(23, 59, 59, 999);
+    
+    const minutosPrimerDia = minutesBetween(fechaActual, finPrimerDia);
+    let tarifaPrimerDia = (minutosPrimerDia / 60) * 10;
+    tarifaTotal += Math.min(50.00, tarifaPrimerDia);
+    
+    // Días completos intermedios
+    fechaActual.setDate(fechaActual.getDate() + 1);
+    fechaActual.setHours(0, 0, 0, 0);
+    
+    while (fechaActual.toDateString() !== fechaFin.toDateString()) {
+        // Un día completo = 24 horas * 10 Bs = 240 Bs, pero con tope de 50 Bs
+        tarifaTotal += 50.00;
+        
+        fechaActual.setDate(fechaActual.getDate() + 1);
     }
     
-    if (horaInicio < 22 && (horaFin >= 0 && horaFin < 6)) {
-        let tarifaTotal = 0;
+    // Último día (día de salida) - solo si hay tiempo en ese día
+    if (fechaFin.getHours() > 0 || fechaFin.getMinutes() > 0) {
+        const inicioUltimoDia = new Date(fechaFin);
+        inicioUltimoDia.setHours(0, 0, 0, 0);
         
-        const finDiurno = new Date(fechaInicio);
-        finDiurno.setHours(22, 0, 0, 0);
-        
-        if (fechaInicio < finDiurno) {
-            const minutosDiurnos = minutesBetween(fechaInicio, finDiurno);
-            tarifaTotal += (minutosDiurnos / 60) * 10;
-        }
-        
-        const inicioNocturno = new Date(fechaInicio);
-        inicioNocturno.setHours(22, 0, 0, 0);
-        
-        const minutosNocturnos = minutesBetween(inicioNocturno, fechaFin);
-        tarifaTotal += (minutosNocturnos / 60) * 6;
-        
-        return Math.round(tarifaTotal * 100) / 100;
+        const minutosUltimoDia = minutesBetween(inicioUltimoDia, fechaFin);
+        let tarifaUltimoDia = (minutosUltimoDia / 60) * 10;
+        tarifaTotal += Math.min(50.00, tarifaUltimoDia);
     }
     
-    const tarifa = (minutos / 60) * 10;
-    return Math.round(tarifa * 100) / 100;
+    return Math.round(tarifaTotal * 100) / 100;
 }
 
 export function minutesBetween(fechaInicio, fechaFin) {
