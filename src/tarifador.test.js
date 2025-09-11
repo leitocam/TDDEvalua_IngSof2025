@@ -61,5 +61,11 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-11T01:00:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(28.00);
     });
-
+    // debe aplicar tope de 50 Bs por día calendario
+    it('deberia aplicar tope de 50 Bs por dia calendario', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-10T23:59:59');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(50.00);
+    });
+   
 });

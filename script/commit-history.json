@@ -171,12 +171,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7196727e89e3fd16d866509d6819e4f17335cb9e",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-11T04:50:04.000Z",
       "message": "feat:Cobro horas nocturnas",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/7196727e89e3fd16d866509d6819e4f17335cb9e"
     },
     "stats": {
       "total": 37,
@@ -186,6 +186,44 @@
     },
     "coverage": 96.3,
     "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "7196727e89e3fd16d866509d6819e4f17335cb9e",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T05:07:36.000Z",
+      "message": "feat:Tope diario maximo",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/7196727e89e3fd16d866509d6819e4f17335cb9e"
+    },
+    "stats": {
+      "total": 57,
+      "additions": 33,
+      "deletions": 24,
+      "date": "2025-09-11"
+    },
+    "coverage": 96,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T05:27:06.000Z",
+      "message": "feat:Tope diario maximo",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 79,
+      "additions": 58,
+      "deletions": 21,
+      "date": "2025-09-11"
+    },
+    "coverage": 68.18,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }
