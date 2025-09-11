@@ -14,6 +14,11 @@ export function calcularTarifa(fechaInicio, fechaFin) {
         return 10.00;
     }
     
+    if (minutos < 60) {
+        const tarifa = (minutos / 60) * 10;
+        return Math.round(tarifa * 100) / 100; 
+    }
+    
     return 0;
 }
 

@@ -37,4 +37,11 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-10T11:00:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(10.00);
     });
+    //Debe calcular el cobro para estadia menor a una hora redondeando en 2 decimales
+    it('deberia calcular la tarifa para una estadia menor a una hora', () => {
+        const fechaInicio = new Date('2023-10-10T10:00:00');
+        const fechaFin = new Date('2023-10-10T10:45:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(7.50);
+    });
+
 });
