@@ -49,3 +49,10 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-10T11:45:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(17.50);
     });
+    //Debe aplicar tarifa nocturna entre 22:00 y 06:00 donde se rige 6.00 por hora o fracción
+    it('deberia aplicar tarifa nocturna entre 22:00 y 06:00', () => {
+        const fechaInicio = new Date('2023-10-10T22:00:00');
+        const fechaFin = new Date('2023-10-11T01:00:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(18.00);
+    });
+});
