@@ -55,4 +55,11 @@ describe('calcularTarifa', () => {
         const fechaFin = new Date('2023-10-11T01:00:00');
         expect(calcularTarifa(fechaInicio, fechaFin)).toBe(18.00);
     });
+    // debe comprobar el cobro para estadia que inicia en horario diurno y termina en horario nocturno
+    it('deberia calcular la tarifa para una estadia que inicia en horario diurno y termina en horario nocturno', () => {
+        const fechaInicio = new Date('2023-10-10T21:00:00');
+        const fechaFin = new Date('2023-10-11T01:00:00');
+        expect(calcularTarifa(fechaInicio, fechaFin)).toBe(28.00);
+    });
+
 });
