@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Obtener las fechas del formulario
         const fechaEntradaInput = document.getElementById('fechaEntrada').value;
         const fechaSalidaInput = document.getElementById('fechaSalida').value;
+        const ticketPerdido = document.getElementById('ticketPerdido').checked;
         
         if (!fechaEntradaInput || !fechaSalidaInput) {
             mostrarError('Por favor, selecciona ambas fechas');
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Calcular la tarifa
-            const tarifa = calcularTarifa(fechaEntrada, fechaSalida);
+            const tarifa = calcularTarifa(fechaEntrada, fechaSalida, ticketPerdido);
             
             // Mostrar las fechas seleccionadas y el resultado
             mostrarResultado(fechaEntrada, fechaSalida, tarifa);

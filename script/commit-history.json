@@ -266,16 +266,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "248b3309ccf5e1438119f142ff405a7796af0368",
     "author": "leitocam",
     "commit": {
       "date": "2025-09-11T11:28:15.000Z",
       "message": "feat:cobro bajo ticket perdido",
-      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/248b3309ccf5e1438119f142ff405a7796af0368"
     },
     "stats": {
       "total": 13,
       "additions": 12,
+      "deletions": 1,
+      "date": "2025-09-11"
+    },
+    "coverage": 98,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "leitocam",
+    "commit": {
+      "date": "2025-09-11T11:35:30.000Z",
+      "message": "style: Modifica boton de ticket perdido",
+      "url": "https://github.com/leitocam/TDDEvalua_IngSof2025/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 10,
       "deletions": 1,
       "date": "2025-09-11"
     },
